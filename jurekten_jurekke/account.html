@@ -187,7 +187,6 @@
         var email = document.getElementById("floatingInput").value;
         var password = document.getElementById("floatingPassword").value;
 
-        // Save the form data
         var formData = {
           email: email,
           password: password,
@@ -197,17 +196,14 @@
 
         console.log(formData);
 
-        // Perform form validation and show success message
         if (email && password) {
-          // Display success message
           showSuccessMessage();
-          return false; // Prevent form submission
+          return false;
         }
 
         return false;
       }
 
-      // Function to show the success message
       function showSuccessMessage() {
         var messageElement = document.getElementById("registrationMessage");
         messageElement.innerText = "Registration successful!";

@@ -11,8 +11,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="/img/favicon_io (1)/favicon.ico">
-    <link rel="stylesheet" href="/css/catalog.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/img/favicon_io (1)/favicon.ico">
+  <link rel="stylesheet" href="../css/catalog.css">
   <style>
     *,
     /*                                  general style for all pages >                                       */
@@ -178,12 +180,16 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../jurekten_jurekke/cart.html">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <a class="nav-link cart-icon"  href="../jurekten_jurekke/cart.html">
+                  
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="cart-icon">
                     <path
                       d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z" />
                   </svg>
+                  <div class="item-count">0</div>
                 </a>
+               
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -200,7 +206,7 @@
   <div class="row">
     <div class="col-12">
       <div class="catalog-first" style="
-             background-image: url(/img/breadcrumb-bg.jpg);
+             background-image: url(../img/breadcrumb-bg.jpg);
              background-size: cover;
              width: 100%;
              display: flex;
@@ -209,6 +215,7 @@
            ">
         <h1 style="margin-top: 9%; margin-bottom: 9%; margin-left: 30px">
           Catalog
+          
         </h1>
       </div>
     </div>
@@ -239,14 +246,23 @@
       </div>
       <div class="col-lg-9 col-md-8 col-sm-7 col-xs-6">
         <div class="container-fluid d-flex flex-row flex-wrap">
+
+
+
+
+          <!--Visible Products -->
+
+
+
           <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px"
             data-category="sofa">
-            <img src="/img/photo_2023-05-03_10-03-56.jpg" class="card-img-top" alt="..." />
+            <img src="../img/photo_2023-05-03_10-03-56.jpg" class="card-img-top" data-id="1" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Afteroom Dining Chair</h5>
               <p class="card-text">$102.84</p>
               <p>
               </p>
+              <button class="btn btn-outline-secondary add-to-cart-btn" style="width: 100%">Add To Cart</button>
               <button class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-13"
                 id="open-modal-btn-13" style="width: 100%">View</button>
 
@@ -262,7 +278,7 @@
 
           <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px"
             data-category="coat">
-            <img src="/img/product-0.jpg" class="card-img-top" alt="..." />
+            <img src="../img/product-0.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Afteroom Coat Hanger</h5>
               <p class="card-text">$183.76</p>
@@ -275,7 +291,9 @@
                   in, in a bedroom or wherever you place it.
                 </div>
               </div>
-              <button class="btn btn-outline-secondary modal-trigger" id="open-modal-btn-0" style="width: 100%">View</button>
+              <button class="btn btn-outline-secondary add-to-cart-btn" style="width: 100%">Add To Cart</button>
+              <button class="btn btn-outline-secondary modal-trigger" id="open-modal-btn-0"
+                style="width: 100%">View</button>
             </div>
           </div>
 
@@ -288,7 +306,7 @@
 
           <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px"
             data-category="light">
-            <img src="/img/product-1.jpg" class="card-img-top" alt="..." />
+            <img src="../img/product-1.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Afteroom Dining Chair</h5>
               <p class="card-text">$102.84</p>
@@ -303,8 +321,9 @@
                   extended highs for a sound.
                 </div>
               </div>
-              <button  class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-1" id="open-modal-btn-1"
-                style="width: 100%">View</button>
+              <button class="btn btn-outline-secondary add-to-cart-btn" style="width: 100%">Add To Cart</button>
+              <button class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-1"
+                id="open-modal-btn-1" style="width: 100%">View</button>
             </div>
           </div>
 
@@ -317,7 +336,7 @@
 
           <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px"
             data-category="decor">
-            <img src="/img/product-2.jpg" class="card-img-top" alt="..." />
+            <img src="../img/product-2.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Bobber Small Pendant Light</h5>
               <p class="card-text">$120.05</p>
@@ -331,8 +350,9 @@
                   doesn't love a fully loaded desk? Kids are no exception!
                 </div>
               </div>
-              <button  class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-2" id="open-modal-btn-2"
-                style="width: 100%">View</button>
+              <button class="btn btn-outline-secondary add-to-cart-btn" style="width: 100%">Add To Cart</button>
+              <button class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-2"
+                id="open-modal-btn-2" style="width: 100%">View</button>
             </div>
           </div>
 
@@ -344,7 +364,7 @@
 
           <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px"
             data-category="table">
-            <img src="/img/product-3.jpg" class="card-img-top" alt="..." />
+            <img src="../img/product-3.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Bollard Lamp</h5>
               <p class="card-text">$141.36</p>
@@ -358,8 +378,9 @@
                   activates the relevant trigger.
                 </div>
               </div>
-              <button  class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-3" id="open-modal-btn-3"
-                style="width: 100%">View</button>
+              <button class="btn btn-outline-secondary add-to-cart-btn" style="width: 100%">Add To Cart</button>
+              <button class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-3"
+                id="open-modal-btn-3" style="width: 100%">View</button>
             </div>
           </div>
 
@@ -373,7 +394,7 @@
 
           <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px"
             data-category="sofa">
-            <img src="/img/product-4.jpg" class="card-img-top" alt="..." />
+            <img src="../img/product-4.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Circula Coffee Table</h5>
               <p class="card-text">$239.00</p>
@@ -386,8 +407,9 @@
                   our coffee tables keep everything you like to have close by.
                 </div>
               </div>
-              <button class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-4" id="open-modal-btn-4"
-                style="width: 100%">View</button>
+              <button class="btn btn-outline-secondary add-to-cart-btn" style="width: 100%">Add To Cart</button>
+              <button class="btn btn-outline-secondary modal-trigger" data-modal-id="product-modal-4"
+                id="open-modal-btn-4" style="width: 100%">View</button>
             </div>
           </div>
         </div>
@@ -399,13 +421,13 @@
 
 
 
-
+  <!--MODAL-->
 
 
 
   <div class="myModal" id="product-modal-13">
     <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px" data-category="sofa">
-      <img src="/img/photo_2023-05-03_10-03-56.jpg" class="card-img-top" alt="..." />
+      <img src="../img/photo_2023-05-03_10-03-56.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Afteroom Dining Chair</h5>
         <p class="card-text">$102.84</p>
@@ -417,9 +439,14 @@
           unexpected hues.
         </p>
       </div>
-      <button class="close-btn" id="close-modal-btn-13"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg></button>
+      <a class="week__products__link__catalog" href="../jurekten_jurekke/cart.html">
+        <p>Add to cart</p>
+      </a>
+      <button class="close-btn" id="close-modal-btn-13"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
     </div>
   </div>
 
@@ -427,7 +454,7 @@
 
   <div class="myModal" id="product-modal-0">
     <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px" data-category="sofa">
-      <img src="/img/product-0.jpg" class="card-img-top" alt="..." />
+      <img src="../img/product-0.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Afteroom Dining Chair</h5>
         <p class="card-text">$102.84</p>
@@ -439,9 +466,11 @@
           unexpected hues.
         </p>
       </div>
-      <button class="close-btn" id="close-modal-btn-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg></button>
+      <button class="close-btn" id="close-modal-btn-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
     </div>
   </div>
 
@@ -449,7 +478,7 @@
 
   <div class="myModal" id="product-modal-1">
     <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px" data-category="sofa">
-      <img src="/img/product-1.jpg" class="card-img-top" alt="..." />
+      <img src="../img/product-1.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Afteroom Dining Chair</h5>
         <p class="card-text">$102.84</p>
@@ -462,9 +491,11 @@
           extended highs for a sound.</p>
 
       </div>
-      <button class="close-btn" id="close-modal-btn-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg></button>
+      <button class="close-btn" id="close-modal-btn-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
     </div>
   </div>
 
@@ -472,7 +503,7 @@
 
   <div class="myModal" id="product-modal-2">
     <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px" data-category="table">
-      <img src="/img/product-2.jpg" class="card-img-top" alt="..." />
+      <img src="../img/product-2.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Bobber Small Pendant Light</h5>
         <p class="card-text">$120.05</p>
@@ -486,9 +517,11 @@
 
 
       </div>
-      <button class="close-btn" id="close-modal-btn-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg></button>
+      <button class="close-btn" id="close-modal-btn-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
     </div>
 
   </div>
@@ -497,7 +530,7 @@
 
   <div class="myModal" id="product-modal-3">
     <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px" data-category="table">
-      <img src="/img/product-3.jpg" class="card-img-top" alt="..." />
+      <img src="../img/product-3.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Bollard Lamp</h5>
         <p class="card-text">$141.36</p>
@@ -509,9 +542,11 @@
           activates the relevant trigger.</p>
 
       </div>
-      <button class="close-btn" id="close-modal-btn-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg></button>
+      <button class="close-btn" id="close-modal-btn-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
     </div>
   </div>
 
@@ -519,7 +554,7 @@
 
   <div class="myModal" id="product-modal-4">
     <div class="card border-0 rounded-bottom product" style="width: 18rem; margin-right: 25px" data-category="sofa">
-      <img src="/img/product-4.jpg" class="card-img-top" alt="..." />
+      <img src="../img/product-4.jpg" class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">Circula Coffee Table</h5>
         <p class="card-text">$239.00</p>
@@ -531,9 +566,11 @@
           our coffee tables keep everything you like to have close by.
         </p>
       </div>
-      <button class="close-btn" id="close-modal-btn-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-      </svg></button>
+      <button class="close-btn" id="close-modal-btn-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg></button>
     </div>
   </div>
 
@@ -581,25 +618,8 @@
       <p class="footer__text">Copyright &copy; 2023, Jurekten_Jurekke</p>
     </div>
   </footer>
-  <!--<nav aria-label="Page navigation center">
-         <ul class="pagination">
-           <li class="page-item">
-             <a class="page-link" href="#" aria-label="Previous">
-               <span aria-hidden="true">&laquo;</span>
-             </a>
-           </li>
-           <li class="page-item"><a class="page-link" href="#">1</a></li>
-           <li class="page-item"><a class="page-link" href="#">2</a></li>
-           <li class="page-item"><a class="page-link" href="#">3</a></li>
-           <li class="page-item">
-             <a class="page-lidnk" href="#" aria-label="Next">
-               <span aria-hidden="true">&raquo;</span>
-             </a>
-           </li>
-         </ul>
-       </nav>-->
-  <script src="js/bootstrap.js"></script>
-  <script src="/js/script-catalog.js"></script>
+  <script src="../js/script-catalog.js"></script>
+
 </body>
 
 </html>

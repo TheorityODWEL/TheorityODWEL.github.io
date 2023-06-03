@@ -17,7 +17,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/about-us.css" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon_io (1)/favicon.ico">
   </head>
   <body>
     <header class="header" id="header">
@@ -100,66 +99,38 @@
       </div>
     </header>
     <div class="img__text">
-      <h1 style="margin-top: 9%; margin-bottom: 9%; margin-left: 30px">
+      <h1 style="font-size: 300%; margin-top: 9%; margin-bottom: 9%; margin-left: 30px">
         About us
       </h1>
     </div>
-    <section class="welcome">
-      <div class="container">
-        <div class="welcome-inner">
-          <h1 class="title">Coming Home</h1>
-          <p class="welcome-text">
-            Designed with the modern family in mind, designer Hee Welling
-            considered every aspect of the Patch table to ensure maximum
-            functionality.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="section-container">
-      <div class="container">
-        <div class="section-content">
-          <div class="section-image">
-            <img src="/img/contact_1.jpg" alt="Фото" />
-          </div>
-          <div class="section-text">
-            <h2>We’re different by design</h2>
-            <p>
-              Our story started with a problem (the best ideas usually do). Some
-              ten years ago, our founder was furnishing his flat. Frustrated at
-              the lack of well-designed, good quality and affordable sofas, he
-              set about redefining the process. The concept was clear:
-              collaborate with independent designers and makers to create pieces
-              you’ll love, minus the mark-up. And so MADE.COM was born. The
-              destination for creating your dream home.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <br />
-    <br />
-    <br />
-    <section class="section-container">
-      <div class="container">
-        <div class="section-content">
-          <div class="section-image">
-            <img src="/img/contact_2-1536x1006.jpg" alt="Фото" />
-          </div>
-          <div class="section-text">
-            <h2>We support independent designers</h2>
-            <p>
-              Nothing excites us more than great design. That’s why we champion
-              emerging and established creative talent from all over the world.
-              The result? Innovative products and exclusive ranges. Pieces that
-              consider every space and individual. And for our designers, it
-              means being part of a true partnership that has their interests at
-              heart.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <br>
+    <h1 style="font-size: 500%; margin-top: 3%; margin-bottom: 5%; margin-left: 30px; text-align: center;">
+      Our aim
+    </h1>
+    <div id="Quality" class="tabcontent">
+      <h1>Quality</h1>
+    </div>
+    
+    <div id="EnvironmentalFriendliness" class="tabcontent">
+      <h1>Environmental friendliness</h1>   
+    </div>
+    
+    <div id="Comfort" class="tabcontent">
+      <h1>Comfort</h1>
+    </div>
+
+    <div id="Availability" class="tabcontent">
+      <h1>Availability</h1>
+    </div>
+
+    <button class="tablink" onclick="openCity('Quality', this, 'rgb(182, 62, 62)')" id="defaultOpen">Quality</button>
+    <button class="tablink" onclick="openCity('EnvironmentalFriendliness', this, 'rgb(100, 179, 100)')">Environment</button>
+    <button class="tablink" onclick="openCity('Comfort', this, 'rgb(221, 126, 62)')">Comfort</button>
+    <button class="tablink" onclick="openCity('Availability', this, 'rgb(136, 105, 49)')">Availability</button>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
           <div class="container" style = "padding-bottom: 50px;">
             <h1 style="margin: 10px 0 30px">
@@ -248,9 +219,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+     
     <footer>
       <div class="container-fluid">
         <div class="row footer__inner">
@@ -280,7 +249,28 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="/js/slick.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script>function openCity(cityName, elmnt, color) {
+      // Hide all elements with class="tabcontent" by default */
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+    
+      // Remove the background color of all tablinks/buttons
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+    
+      // Show the specific tab content
+      document.getElementById(cityName).style.display = "block";
+    
+      // Add the specific color to the button used to open the tab content
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();</script>
   </body>
 </html>

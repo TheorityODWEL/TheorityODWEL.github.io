@@ -237,10 +237,7 @@ footer {
   text-align: center;
 } /*                   < general style for all pages  */
 
-.btn-primary {
-  background-color: black;
-  border-color: black;
-}
+
 
 .jumbotron {
   margin-left: 50px;
@@ -256,3 +253,95 @@ footer {
   margin-left: 10px;
   margin-bottom: 30px;
 }
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eeeeee;
+  color: #181818;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  font-size: large;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.default {
+  border-color: #0f0f0f;
+  color: black;
+}
+
+.default:hover {
+  background: #0c0c0c;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Style the tab buttons */
+.tablink {
+  background-color: #f7f6f6;
+  color: rgb(8, 8, 8);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 22px 16px;
+  font-size: 20px;
+  width: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #fcfcfc;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Style each tab content individually */
+#Quality {background-color:rgb(182, 62, 62);}
+#EnvironmentalFriendliness {background-color:rgb(100, 179, 100);}
+#Comfort {background-color:rgb(221, 126, 62);}
+#Availability {background-color:rgb(136, 105, 49);}
